@@ -82,7 +82,7 @@ const handleSubmit = async (e: React.FormEvent) => {
     console.error(error);
 
     setStatus("error");
-    setErrorMsg("Failed to submit. Please try again.");
+    setErrorMsg(String(error));
   }
 };
   
