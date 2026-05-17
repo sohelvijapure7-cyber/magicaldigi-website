@@ -57,24 +57,35 @@ export default function ContactContent() {
     setForm((f) => ({ ...f, [e.target.name]: e.target.value }));
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setStatus("sending");
-    setErrorMsg("");
-    try {
-      const res = await fetch("/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(form),
-      });
-      const data = await res.json();
-      if (!res.ok) throw new Error(data.error || "Something went wrong.");
-      setStatus("sent");
-    } catch (err: unknown) {
-      setErrorMsg(err instanceof Error ? err.message : "Failed to send. Please try again.");
-      setStatus("error");
-    }
-  };
+const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault();
+
+  setStatus("sending");
+  setErrorMsg("");
+
+  try {
+    const res = await fetch("/api/contact", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(form),
+    });
+
+    const data = await res.json();
+
+    console.log(data);
+
+    setStatus("sent");
+
+  } catch (error) {
+    console.error(error);
+
+    setStatus("error");
+    setErrorMsg("Failed to submit. Please try again.");
+  }
+};
+  
 
   return (
     <>
