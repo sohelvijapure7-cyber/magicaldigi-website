@@ -24,7 +24,7 @@ const skills = [
 const highlights = [
   { icon: Target, label: "Mission", value: "Performance-Driven Results" },
   { icon: Lightbulb, label: "Vision", value: "India's Top Digital Agency" },
-  { icon: Users, label: "Team Size", value: "25+ Experts" },
+  { icon: Users, label: "Team Size", value: "10+ Experts" },
   { icon: Globe, label: "Clients Served", value: "100+ Brands" },
 ];
 
@@ -32,7 +32,7 @@ export default function AboutContent() {
   return (
     <>
       {/* Hero */}
-      <section className="relative pt-36 pb-24 page-hero-bg overflow-hidden">
+      <section className="relative pt-44 md:pt-48 pb-24 page-hero-bg overflow-hidden">
         <div className="absolute -top-40 right-0 w-[500px] h-[500px] bg-[#f05a28]/10 blur-3xl rounded-full pointer-events-none" />
         <div className="max-w-7xl mx-auto px-5 md:px-10 lg:px-16 relative z-10">
           <div className="flex items-center gap-2 text-sm text-slate-500 mb-6">
@@ -150,11 +150,11 @@ export default function AboutContent() {
               Where We&apos;re <span className="gradient-text">Headed</span>
             </h2>
           </AnimatedSection>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 max-w-5xl mx-auto">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 max-w-5xl mx-auto items-stretch">
             {goals.map((goal, i) => (
-              <AnimatedSection key={i} delay={i * 0.1}>
-                <div className="glass-card glass-card-hover p-6 flex gap-4">
-                  <CheckCircle2 size={20} className="text-[#f05a28] shrink-0 mt-0.5" />
+              <AnimatedSection key={i} delay={i * 0.1} className="h-full">
+                <div className="glass-card glass-card-hover p-6 flex flex-col items-center text-center justify-center gap-3 h-full min-h-[140px]">
+                  <CheckCircle2 size={20} className="text-[#f05a28] shrink-0" />
                   <p className="text-slate-300 text-sm leading-relaxed">{goal}</p>
                 </div>
               </AnimatedSection>

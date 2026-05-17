@@ -52,8 +52,8 @@ export default function LeadPopup() {
       return;
     }
     
-    const phoneRegex = /^[0-9]{10}$/;
-    if (!phoneRegex.test(form.phone.trim())) {
+    const phoneValue = form.phone.replace(/\D/g, ''); // Strip non-digits
+    if (phoneValue.length < 10) {
       setError("Please enter a valid 10-digit phone number.");
       return;
     }
@@ -64,19 +64,37 @@ export default function LeadPopup() {
     }
 
     setStatus("sending");
-    // Simulate delay
-    await new Promise((r) => setTimeout(r, 1200));
     
-    setStatus("sent");
-    localStorage.setItem("magicaldigi_lead_filled", "true");
-    setHasFilled(true);
-    
-    setTimeout(() => {
-      setIsOpen(false);
-      if (pendingUrl && pendingUrl !== window.location.href && !pendingUrl.startsWith("tel:") && !pendingUrl.startsWith("mailto:")) {
-        window.location.href = pendingUrl;
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: form.name.trim(),
+          phone: form.phone.trim(),
+          service: form.service,
+          source: "popup",
+        }),
+      });
+
+      if (!res.ok) {
+        throw new Error("Failed to submit. Please try again.");
       }
-    }, 1500);
+
+      setStatus("sent");
+      localStorage.setItem("magicaldigi_lead_filled", "true");
+      setHasFilled(true);
+      
+      setTimeout(() => {
+        setIsOpen(false);
+        if (pendingUrl && pendingUrl !== window.location.href && !pendingUrl.startsWith("tel:") && !pendingUrl.startsWith("mailto:")) {
+          window.location.href = pendingUrl;
+        }
+      }, 1500);
+    } catch (err: any) {
+      setError(err.message || "Something went wrong.");
+      setStatus("idle");
+    }
   };
 
   if (hasFilled && !isOpen) return null;

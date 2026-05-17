@@ -82,9 +82,9 @@ export default function Pricing() {
           </p>
         </AnimatedSection>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-start">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
           {plans.map((plan, i) => (
-            <AnimatedSection key={plan.name} delay={i * 0.12}>
+            <AnimatedSection key={plan.name} delay={i * 0.12} className="h-full">
               <div className={`relative rounded-2xl p-7 flex flex-col h-full transition-all duration-300 ${
                 plan.highlight
                   ? "bg-gradient-to-b from-[#f05a28]/15 to-[#13131f] border-2 border-[#f05a28]/40 shadow-2xl shadow-[#f05a28]/10"
@@ -97,26 +97,26 @@ export default function Pricing() {
                   </div>
                 )}
 
-                <div className="mb-6">
+                <div className="mb-6 text-center flex flex-col items-center">
                   <p className="text-[#f05a28] text-xs font-bold uppercase tracking-widest mb-2">{plan.name}</p>
-                  <div className="flex items-baseline gap-1 mb-3">
+                  <div className="flex items-baseline gap-1 mb-3 justify-center">
                     <span className="text-white text-3xl font-extrabold font-heading">Get Quote</span>
                   </div>
-                  <p className="text-slate-400 text-sm">{plan.description}</p>
+                  <p className="text-slate-400 text-sm max-w-[240px]">{plan.description}</p>
                 </div>
 
-                <div className="space-y-3 flex-1 mb-8">
+                <div className="space-y-3 flex-1 mb-8 flex flex-col items-center justify-center">
                   {plan.features.map((f) => (
-                    <div key={f} className="flex items-start gap-3">
-                      <div className="w-5 h-5 rounded-full bg-[#f05a28]/20 flex items-center justify-center shrink-0 mt-0.5">
+                    <div key={f} className="flex items-center gap-2.5 text-center justify-center">
+                      <div className="w-5 h-5 rounded-full bg-[#f05a28]/20 flex items-center justify-center shrink-0">
                         <Check size={11} className="text-[#f05a28]" />
                       </div>
                       <span className="text-slate-300 text-sm">{f}</span>
                     </div>
                   ))}
                   {plan.excluded.map((f) => (
-                    <div key={f} className="flex items-start gap-3 opacity-35">
-                      <div className="w-5 h-5 rounded-full bg-white/5 flex items-center justify-center shrink-0 mt-0.5">
+                    <div key={f} className="flex items-center gap-2.5 text-center justify-center opacity-35">
+                      <div className="w-5 h-5 rounded-full bg-white/5 flex items-center justify-center shrink-0">
                         <span className="text-slate-600 text-xs font-bold">—</span>
                       </div>
                       <span className="text-slate-500 text-sm line-through">{f}</span>

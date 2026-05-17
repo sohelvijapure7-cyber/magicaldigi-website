@@ -41,16 +41,16 @@ export default function Navbar() {
         }`}
       >
         <div className="max-w-7xl mx-auto px-5 md:px-10 lg:px-16">
-          <div className="flex items-center justify-between h-28 md:h-36">
+          <div className="flex items-center justify-between h-32 md:h-42">
 
             {/* Logo */}
             <Link href="/" className="flex items-center group">
               <Image 
                 src="/logo.png" 
                 alt="MagicalDigi Logo" 
-                width={400} 
-                height={120} 
-                className="h-20 md:h-28 w-auto object-contain"
+                width={480} 
+                height={144} 
+                className="h-24 md:h-34 w-auto object-contain"
                 priority
               />
             </Link>

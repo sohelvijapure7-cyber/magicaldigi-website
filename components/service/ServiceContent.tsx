@@ -80,7 +80,7 @@ export default function ServiceContent() {
   return (
     <>
       {/* Hero */}
-      <section className="relative pt-36 pb-24 page-hero-bg overflow-hidden">
+      <section className="relative pt-44 md:pt-48 pb-24 page-hero-bg overflow-hidden">
         <div className="absolute -top-40 left-0 w-[500px] h-[500px] bg-[#f05a28]/10 blur-3xl rounded-full pointer-events-none" />
         <div className="max-w-7xl mx-auto px-5 md:px-10 lg:px-16 relative z-10">
           <div className="flex items-center gap-2 text-sm text-slate-500 mb-6">

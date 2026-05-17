@@ -54,7 +54,7 @@ export default function PortfolioContent() {
   return (
     <>
       {/* Hero */}
-      <section className="relative pt-36 pb-24 page-hero-bg overflow-hidden">
+      <section className="relative pt-44 md:pt-48 pb-24 page-hero-bg overflow-hidden">
         <div className="absolute -top-40 right-0 w-[500px] h-[500px] bg-purple-600/10 blur-3xl rounded-full pointer-events-none" />
         <div className="max-w-7xl mx-auto px-5 md:px-10 lg:px-16 relative z-10">
           <div className="flex items-center gap-2 text-sm text-slate-500 mb-6">
