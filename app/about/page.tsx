@@ -2,18 +2,18 @@ import type { Metadata } from "next";
 import AboutContent from "@/components/about/AboutContent";
 
 export const metadata: Metadata = {
-  title: "About Us | MagicalDigi – Digital Marketing Agency",
+  title: "About MagicalDigi | Startup-Focused Digital Marketing Agency in India",
   description:
-    "Learn about MagicalDigi – a results-driven digital marketing agency in Mumbai specializing in Performance Marketing, SEO, and Social Media Branding for startups and growing brands.",
+    "Learn about MagicalDigi, a startup-focused digital marketing agency in India helping brands grow through SEO, social media marketing, creative branding, and performance-driven strategies.",
   alternates: {
     canonical: "https://magicaldigi.com/about",
   },
   openGraph: {
-    title: "About MagicalDigi | Digital Marketing Agency in India",
+    title: "About MagicalDigi | Startup-Focused Digital Marketing Agency in India",
     description:
-      "Learn about MagicalDigi – a results-driven digital marketing agency in Mumbai specializing in Performance Marketing, SEO, and Social Media Branding.",
+      "Learn about MagicalDigi, a startup-focused digital marketing agency in India helping brands grow through SEO, social media marketing, creative branding, and performance-driven strategies.",
     url: "https://magicaldigi.com/about",
-    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "About MagicalDigi" }],
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "startup marketing agency india" }],
   },
 };
 

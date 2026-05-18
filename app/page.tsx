@@ -11,23 +11,23 @@ import CTABanner from "@/components/home/CTABanner";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "MagicalDigi | Digital Marketing Agency in India",
+  title: "MagicalDigi – Full-Service Digital Marketing Agency in India",
   description:
-    "MagicalDigi provides web design, SEO, branding and digital marketing services. Top digital marketing agency in Mumbai helping brands scale with Performance Marketing & SEO.",
+    "MagicalDigi is a full-service digital marketing agency in India helping startups and brands grow with SEO, performance marketing, social media branding, website development, and creative growth strategies.",
   alternates: {
     canonical: "https://magicaldigi.com",
   },
   openGraph: {
-    title: "MagicalDigi | Digital Marketing Agency in India",
+    title: "MagicalDigi – Full-Service Digital Marketing Agency in India",
     description:
-      "MagicalDigi provides web design, SEO, branding and digital marketing services.",
+      "MagicalDigi is a full-service digital marketing agency in India helping startups and brands grow with SEO, performance marketing, social media branding, website development, and creative growth strategies.",
     url: "https://magicaldigi.com",
     images: [
       {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "MagicalDigi Digital Marketing Agency",
+        alt: "digital marketing agency in india",
       },
     ],
   },

@@ -2,18 +2,18 @@ import type { Metadata } from "next";
 import ServiceContent from "@/components/service/ServiceContent";
 
 export const metadata: Metadata = {
-  title: "Our Services | MagicalDigi – Digital Marketing Agency",
+  title: "Digital Marketing Services in India | SEO, Ads & Social Media – MagicalDigi",
   description:
-    "Explore MagicalDigi's digital marketing services: Performance Marketing, SEO, Social Media Branding, and Website Development. Data-driven strategies for real business growth.",
+    "Explore MagicalDigi's digital marketing services including SEO, performance marketing, social media branding, and website development designed to help startups and businesses grow online.",
   alternates: {
     canonical: "https://magicaldigi.com/service",
   },
   openGraph: {
-    title: "Digital Marketing Services | MagicalDigi India",
+    title: "Digital Marketing Services in India | SEO, Ads & Social Media – MagicalDigi",
     description:
-      "Performance Marketing, SEO, Social Media Branding & Website Development services by MagicalDigi – Mumbai's top digital marketing agency.",
+      "Explore MagicalDigi's digital marketing services including SEO, performance marketing, social media branding, and website development designed to help startups and businesses grow online.",
     url: "https://magicaldigi.com/service",
-    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "MagicalDigi Services" }],
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "digital marketing services in india" }],
   },
 };
 

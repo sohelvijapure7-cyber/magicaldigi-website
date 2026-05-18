@@ -5,7 +5,7 @@ import Link from "next/link";
 import { ArrowRight, Sparkles, TrendingUp, Users } from "lucide-react";
 
 export default function Hero() {
-  const words = ["Marketing", "That", "Delivers", "Real", "Results"];
+  const words = ["Full-Service", "Digital", "Marketing", "Agency", "in", "India"];
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#0a0a14] pt-20">

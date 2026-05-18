@@ -68,7 +68,7 @@ export default function PortfolioContent() {
             transition={{ duration: 0.7 }}
             className="text-5xl md:text-7xl font-black text-white section-heading mb-6"
           >
-            Our Latest <span className="gradient-text">Works</span>
+            Our Digital Marketing <span className="gradient-text">Portfolio</span>
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
