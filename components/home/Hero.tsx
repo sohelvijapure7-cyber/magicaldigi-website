@@ -3,7 +3,8 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowRight, Sparkles, TrendingUp, Users } from "lucide-react";
+import { ArrowRight, Sparkles } from "lucide-react";
+import AiHeroVisual from "./AiHeroVisual";
 
 export default function Hero() {
   const words = ["Full-Service", "Digital", "Marketing", "Agency", "in", "India"];
@@ -117,76 +118,14 @@ export default function Hero() {
           </motion.div>
         </div>
 
-        {/* Right — Visual Card */}
+        {/* Right — Premium Futuristic AI Animated Visual */}
         <motion.div
-          initial={{ opacity: 0, scale: 0.85, rotate: 3 }}
-          animate={{ opacity: 1, scale: 1, rotate: 0 }}
+          initial={{ opacity: 0, scale: 0.85 }}
+          animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1.1, delay: 0.4, ease: [0.21, 0.47, 0.32, 0.98] as [number,number,number,number] }}
-          className="relative hidden lg:flex items-center justify-center"
+          className="relative flex w-full items-center justify-center mt-12 lg:mt-0"
         >
-          {/* Main card */}
-          <div className="relative w-full max-w-xl aspect-square rounded-3xl overflow-hidden border border-white/10 shadow-2xl">
-            <div className="absolute inset-0 bg-gradient-to-br from-[#f05a28]/20 via-purple-900/20 to-[#0d0d1a]" />
-            <Image
-              src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=900&auto=format&fit=crop"
-              alt="Digital marketing analytics dashboard - Digital marketing agency in India"
-              width={600}
-              height={600}
-              priority
-              className="w-full h-full object-cover opacity-80"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a14]/90 via-transparent to-transparent" />
-
-            {/* Content overlay */}
-            <div className="absolute bottom-6 left-6 right-6">
-              <p className="text-slate-400 text-xs uppercase tracking-widest mb-1">Campaign Performance</p>
-              <div className="flex items-end gap-2">
-                <span className="text-white text-3xl font-bold font-heading">+145%</span>
-                <span className="text-green-400 text-sm mb-1">↑ Growth</span>
-              </div>
-              <div className="mt-3 h-1.5 bg-white/10 rounded-full overflow-hidden">
-                <motion.div
-                  initial={{ width: 0 }}
-                  animate={{ width: "85%" }}
-                  transition={{ duration: 1.5, delay: 1.2 }}
-                  className="h-full bg-gradient-to-r from-[#f05a28] to-[#ff8c42] rounded-full"
-                />
-              </div>
-            </div>
-          </div>
-
-          {/* Floating card — Growth */}
-          <motion.div
-            animate={{ y: [0, -12, 0] }}
-            transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-            className="absolute -top-6 -left-10 glass-card p-4 flex items-center gap-3 shadow-xl"
-          >
-            <div className="w-10 h-10 rounded-xl bg-green-500/20 flex items-center justify-center">
-              <TrendingUp size={18} className="text-green-400" />
-            </div>
-            <div>
-              <p className="text-slate-400 text-xs">Growth Rate</p>
-              <p className="text-white font-bold text-lg font-heading">+145%</p>
-            </div>
-          </motion.div>
-
-          {/* Floating card — Leads */}
-          <motion.div
-            animate={{ y: [0, 14, 0] }}
-            transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-            className="absolute -bottom-6 -right-8 glass-card p-4 flex items-center gap-3 shadow-xl"
-          >
-            <div className="w-10 h-10 rounded-xl bg-[#f05a28]/20 flex items-center justify-center">
-              <Users size={18} className="text-[#f05a28]" />
-            </div>
-            <div>
-              <p className="text-slate-400 text-xs">New Leads</p>
-              <p className="text-white font-bold text-lg font-heading">2,400+</p>
-            </div>
-          </motion.div>
-
-          {/* Glow ring */}
-          <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-[#f05a28]/10 to-transparent blur-xl -z-10 scale-105" />
+          <AiHeroVisual />
         </motion.div>
       </div>
 
