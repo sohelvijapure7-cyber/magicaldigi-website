@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { ArrowRight, Search, BarChart2, LineChart } from "lucide-react";
 import AnimatedSection from "@/components/AnimatedSection";
 
@@ -54,9 +55,11 @@ export default function AuditCTA() {
           {/* Right — Image */}
           <AnimatedSection direction="right">
             <div className="relative rounded-2xl overflow-hidden border border-white/10 shadow-2xl aspect-[4/3]">
-              <img
+              <Image
                 src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=900&auto=format&fit=crop"
-                alt="Analytics Dashboard"
+                alt="Free SEO and digital marketing campaign audit - Digital marketing agency in India"
+                width={600}
+                height={450}
                 className="w-full h-full object-cover opacity-90"
               />
               <div className="absolute inset-0 bg-gradient-to-tr from-[#0a0a14]/80 via-transparent to-[#f05a28]/10" />

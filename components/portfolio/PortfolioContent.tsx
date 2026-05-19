@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { ArrowRight, ExternalLink } from "lucide-react";
 import AnimatedSection from "@/components/AnimatedSection";
 
@@ -89,10 +90,11 @@ export default function PortfolioContent() {
               <AnimatedSection key={project.title + i} delay={i * 0.1}>
                 <div className="group glass-card overflow-hidden cursor-pointer h-full flex flex-col">
                   <div className="relative aspect-[4/3] overflow-hidden">
-                    <img
+                    <Image
                       src={project.img}
-                      alt={`${project.title} – ${project.category} by MagicalDigi`}
-                      loading="lazy"
+                      alt={`${project.title} – ${project.category} case study by MagicalDigi - Digital marketing agency in India`}
+                      width={400}
+                      height={300}
                       className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a14]/90 via-[#0a0a14]/20 to-transparent" />
@@ -126,11 +128,16 @@ export default function PortfolioContent() {
             <h2 className="text-3xl md:text-4xl font-extrabold text-white section-heading mb-4">
               Want Results Like These?
             </h2>
-            <p className="text-slate-400 mb-8">Let&apos;s build your success story. Contact us for a free strategy session.</p>
-            <Link href="/contact" className="btn-primary inline-flex group">
-              <span>Start Your Project</span>
-              <ArrowRight size={15} className="group-hover:translate-x-1 transition-transform" />
-            </Link>
+            <p className="text-slate-400 mb-8">Let&apos;s build your success story. Explore our specialized services or contact us for a free strategy session.</p>
+            <div className="flex flex-wrap gap-4 justify-center items-center">
+              <Link href="/service" className="btn-primary inline-flex group">
+                <span>Explore Our Services</span>
+                <ArrowRight size={15} className="group-hover:translate-x-1 transition-transform" />
+              </Link>
+              <Link href="/contact" className="btn-outline inline-flex">
+                Start Your Project
+              </Link>
+            </div>
           </AnimatedSection>
         </div>
       </section>

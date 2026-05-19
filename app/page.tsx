@@ -13,23 +13,30 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "MagicalDigi – Full-Service Digital Marketing Agency in India",
   description:
-    "MagicalDigi is a full-service digital marketing agency in India helping startups and brands grow with SEO, performance marketing, social media branding, website development, and creative growth strategies.",
+    "MagicalDigi is a leading full-service digital marketing agency in India. We help startups and brands grow with professional SEO, social media marketing, and paid ads.",
   alternates: {
     canonical: "https://magicaldigi.com",
   },
   openGraph: {
     title: "MagicalDigi – Full-Service Digital Marketing Agency in India",
     description:
-      "MagicalDigi is a full-service digital marketing agency in India helping startups and brands grow with SEO, performance marketing, social media branding, website development, and creative growth strategies.",
+      "MagicalDigi is a leading full-service digital marketing agency in India. We help startups and brands grow with professional SEO, social media marketing, and paid ads.",
     url: "https://magicaldigi.com",
     images: [
       {
-        url: "/og-image.png",
+        url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "digital marketing agency in india",
+        alt: "Digital marketing agency in India",
       },
     ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "MagicalDigi – Full-Service Digital Marketing Agency in India",
+    description:
+      "MagicalDigi is a leading full-service digital marketing agency in India. We help startups and brands grow with professional SEO, social media marketing, and paid ads.",
+    images: ["/og-image.jpg"],
   },
 };
 

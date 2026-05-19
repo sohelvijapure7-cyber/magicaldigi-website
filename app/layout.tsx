@@ -91,11 +91,55 @@ export const metadata: Metadata = {
   publisher: "MagicalDigi",
 };
 
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "MagicalDigi",
+  url: "https://magicaldigi.com",
+  logo: "https://magicaldigi.com/logo.png",
+  sameAs: [
+    "https://www.facebook.com/profile.php?id=61584564725067",
+    "https://www.instagram.com/magicaldigiofficial",
+    "https://www.linkedin.com/company/110229309",
+    "https://youtube.com/@magicaldigi",
+  ],
+  contactPoint: {
+    "@type": "ContactPoint",
+    telephone: "+919834097170",
+    contactType: "customer service",
+    email: "magicaldigi@gmail.com",
+    areaServed: "IN",
+    availableLanguage: ["en", "hi"],
+  },
+};
+
+const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: "MagicalDigi",
+  url: "https://magicaldigi.com",
+  potentialAction: {
+    "@type": "SearchAction",
+    target: "https://magicaldigi.com/search?q={search_term_string}",
+    "query-input": "required name=search_term_string",
+  },
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
+        />
+      </head>
       <body className={`${inter.variable} font-sans antialiased`}>
         <SmoothScroll>
           <Navbar />

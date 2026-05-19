@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight, Sparkles, TrendingUp, Users } from "lucide-react";
 
 export default function Hero() {
@@ -97,8 +98,15 @@ export default function Hero() {
           >
             <div className="flex -space-x-3">
               {[11, 12, 13, 14].map((n) => (
-                <div key={n} className="w-10 h-10 rounded-full border-2 border-[#0a0a14] overflow-hidden bg-slate-700">
-                  <img src={`https://i.pravatar.cc/80?img=${n}`} alt="client" className="w-full h-full object-cover" />
+                <div key={n} className="relative w-10 h-10 rounded-full border-2 border-[#0a0a14] overflow-hidden bg-slate-700">
+                  <Image
+                    src={`https://i.pravatar.cc/80?img=${n}`}
+                    alt="Client partner - Digital marketing agency in India"
+                    width={40}
+                    height={40}
+                    unoptimized
+                    className="w-full h-full object-cover"
+                  />
                 </div>
               ))}
             </div>
@@ -119,9 +127,12 @@ export default function Hero() {
           {/* Main card */}
           <div className="relative w-full max-w-xl aspect-square rounded-3xl overflow-hidden border border-white/10 shadow-2xl">
             <div className="absolute inset-0 bg-gradient-to-br from-[#f05a28]/20 via-purple-900/20 to-[#0d0d1a]" />
-            <img
+            <Image
               src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=900&auto=format&fit=crop"
-              alt="Digital Marketing Analytics"
+              alt="Digital marketing analytics dashboard - Digital marketing agency in India"
+              width={600}
+              height={600}
+              priority
               className="w-full h-full object-cover opacity-80"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a14]/90 via-transparent to-transparent" />

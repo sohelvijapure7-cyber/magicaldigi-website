@@ -52,13 +52,12 @@ export default function Achievements() {
                 <p className="text-white font-medium text-lg">Add achievements.jpg in public folder</p>
               </div>
               
-              <img
+              <Image
                 src="/achievements.jpg"
-                alt="Our Achievements"
+                alt="MagicalDigi achievements milestone - Digital marketing agency in India"
+                width={1000}
+                height={600}
                 className="w-full h-auto max-h-[85vh] object-contain transform group-hover:scale-105 transition-transform duration-700 ease-in-out z-10 relative"
-                onError={(e) => {
-                  (e.target as HTMLImageElement).style.display = "none";
-                }}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#070710]/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-20 pointer-events-none" />
             </div>

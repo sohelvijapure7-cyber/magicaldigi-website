@@ -2,18 +2,34 @@ import type { Metadata } from "next";
 import AboutContent from "@/components/about/AboutContent";
 
 export const metadata: Metadata = {
-  title: "About MagicalDigi | Startup-Focused Digital Marketing Agency in India",
+  title: {
+    absolute: "About MagicalDigi | Startup-Focused Digital Marketing Agency",
+  },
   description:
-    "Learn about MagicalDigi, a startup-focused digital marketing agency in India helping brands grow through SEO, social media marketing, creative branding, and performance-driven strategies.",
+    "Discover how MagicalDigi helps startups and growing brands scale faster. We are a results-driven digital marketing agency in India delivering trust and real ROI.",
   alternates: {
     canonical: "https://magicaldigi.com/about",
   },
   openGraph: {
-    title: "About MagicalDigi | Startup-Focused Digital Marketing Agency in India",
+    title: "About MagicalDigi | Startup-Focused Digital Marketing Agency",
     description:
-      "Learn about MagicalDigi, a startup-focused digital marketing agency in India helping brands grow through SEO, social media marketing, creative branding, and performance-driven strategies.",
+      "Discover how MagicalDigi helps startups and growing brands scale faster. We are a results-driven digital marketing agency in India delivering trust and real ROI.",
     url: "https://magicaldigi.com/about",
-    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "startup marketing agency india" }],
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Digital marketing agency in India",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "About MagicalDigi | Startup-Focused Digital Marketing Agency",
+    description:
+      "Discover how MagicalDigi helps startups and growing brands scale faster. We are a results-driven digital marketing agency in India delivering trust and real ROI.",
+    images: ["/og-image.jpg"],
   },
 };
 

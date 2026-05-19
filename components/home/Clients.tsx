@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 // Placeholder for client images. We duplicate the array to create a seamless loop.
 const clients = Array.from({ length: 6 }).map((_, i) => `/clients/${i + 1}.png`);
@@ -50,13 +51,13 @@ export default function Clients() {
               key={idx}
               className="relative w-48 h-32 md:w-72 md:h-44 grayscale hover:grayscale-0 opacity-60 hover:opacity-100 transition-all duration-500 cursor-pointer flex shrink-0 items-center justify-center bg-white/5 rounded-2xl border border-white/10 group"
             >
-              <img
+              <Image
                 src={src}
-                alt={`Client ${idx + 1}`}
+                alt={`Trusted client partner ${idx + 1} - Digital marketing agency in India`}
+                width={240}
+                height={150}
                 className="max-w-full max-h-full object-contain p-4 md:p-6 group-hover:scale-110 transition-transform duration-500"
-                onError={(e) => {
-                  (e.target as HTMLImageElement).src = `https://ui-avatars.com/api/?name=C&background=111&color=fff&size=200`;
-                }}
+                unoptimized
               />
               <div className="absolute -inset-1 bg-[#f05a28]/20 blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl -z-10" />
             </div>
