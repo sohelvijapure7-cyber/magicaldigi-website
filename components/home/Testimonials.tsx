@@ -5,32 +5,32 @@ import AnimatedSection from "@/components/AnimatedSection";
 
 const testimonials = [
   {
-    name: "Startup Founder",
-    role: "Tech Startup, Mumbai",
+    name: "Arjun Mehta",
+    role: "Startup Founder",
     text: "MagicalDigi helped us generate quality leads within the first month itself. Their performance marketing strategy is outstanding.",
-    rating: 5,
-    avatar: "https://i.pravatar.cc/80?img=33",
+    rating: 4.8,
+    avatar: "https://images.unsplash.com/photo-1556157382-97eda2d62296?fit=crop&w=150&h=150",
   },
   {
-    name: "Retail Business Owner",
-    role: "Retail Chain, Mumbai",
+    name: "Priya Sharma",
+    role: "Retail Chain Director",
     text: "Our brand visibility increased drastically on Instagram and Google after working with MagicalDigi. Highly recommended!",
-    rating: 5,
-    avatar: "https://i.pravatar.cc/80?img=47",
+    rating: 4.9,
+    avatar: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?fit=crop&w=150&h=150",
   },
   {
-    name: "E-Commerce Brand",
-    role: "Online Store Owner",
+    name: "Rahul Desai",
+    role: "E-Commerce Brand Owner",
     text: "The SEO and paid ads team at MagicalDigi delivered 3x ROAS in just 60 days. Amazing results, professional team.",
-    rating: 5,
-    avatar: "https://i.pravatar.cc/80?img=56",
+    rating: 5.0,
+    avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?fit=crop&w=150&h=150",
   },
   {
-    name: "Local Business",
+    name: "Sneha Kapoor",
     role: "Restaurant Owner",
     text: "From zero social media presence to 10K+ followers in 3 months. MagicalDigi knows exactly what they're doing.",
-    rating: 5,
-    avatar: "https://i.pravatar.cc/80?img=25",
+    rating: 4.7,
+    avatar: "https://images.unsplash.com/photo-1580489944761-15a19d654956?fit=crop&w=150&h=150",
   },
 ];
 
@@ -38,10 +38,21 @@ function TestimonialCard({ t }: { t: typeof testimonials[0] }) {
   return (
     <div className="w-80 shrink-0 mx-3 glass-card p-7 flex flex-col gap-5">
       <div className="flex items-center justify-between">
-        <div className="flex gap-1">
-          {Array.from({ length: t.rating }).map((_, i) => (
-            <Star key={i} size={14} className="text-yellow-400 fill-yellow-400" />
-          ))}
+        <div className="flex items-center gap-2">
+          <div className="flex gap-1">
+            {Array.from({ length: 5 }).map((_, i) => {
+              const fillPercentage = Math.max(0, Math.min(1, t.rating - i)) * 100;
+              return (
+                <div key={i} className="relative w-[14px] h-[14px]">
+                  <Star size={14} className="absolute inset-0 text-slate-700 fill-slate-700" />
+                  <div className="absolute inset-0 overflow-hidden" style={{ width: `${fillPercentage}%` }}>
+                    <Star size={14} className="text-yellow-400 fill-yellow-400" />
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+          <span className="text-slate-400 text-xs font-semibold">{t.rating.toFixed(1)}</span>
         </div>
         <Quote size={20} className="text-[#f05a28]/40" />
       </div>
