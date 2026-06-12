@@ -5,6 +5,7 @@ import SmoothScroll from "@/components/SmoothScroll";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import LeadPopup from "@/components/LeadPopup";
+import { Analytics } from "@vercel/analytics/next";
 
 const inter = Outfit({
   subsets: ["latin"],
@@ -147,6 +148,7 @@ export default function RootLayout({
           <Footer />
           <LeadPopup />
         </SmoothScroll>
+        <Analytics />
       </body>
     </html>
   );
